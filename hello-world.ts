@@ -1,5 +1,8 @@
-const greet = (name: string, timeOfDay: string): string => {
-  return `Good ${timeOfDay}, ${name}!`
-}
+const greet = (name: string, timeOfDay?: string): string => {
+    if (timeOfDay) {
+        return `Good ${timeOfDay}, ${name}!`;
+    }
+    return `Hello there, ${name}!`;
+};
 
-console.log(greet('World', 'morning'))
+console.log(greet("World", "morning"));
